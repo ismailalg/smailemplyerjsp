@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1c8aa08e-0164-4b4c-a934-ba48bfd28bdc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="33"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `studentable`,`table_intervenant`,`employe` 
+WHERE employe.nom=studentable.nom and table_intervenant.intervenant=studentable.intervenant
+ and id=1]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departement" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="service" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nature" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="panne" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datetr" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="etat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="intervenant" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_inter" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fonction_inter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email_inter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tel_inter" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idemploye" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type_user" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fonction" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="676" y="22" width="82" height="20" uuid="b8ac74ae-9214-4c58-9ab9-991ffa3645ba"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="82" height="20" uuid="f6c4789b-16b4-4dc8-ae89-f7a7df121fe8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N: ........../20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="802" height="31" uuid="29a6b650-c13d-4b86-99fa-567b20777b9b"/>
+				<box>
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[information sur la structure]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="318" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="245" width="100" height="20" uuid="53c60218-6c73-44f3-9063-69474b93a155"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tel_inter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="205" width="171" height="20" uuid="14fb5fd9-f73d-488d-b636-e8780afbbaec"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fonction_inter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="42" width="171" height="20" uuid="65bffceb-04d9-4b68-82f8-278d6f141233"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="10" width="127" height="20" uuid="37a324dc-8041-468a-bcc1-7ce7f3ab5204"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departement}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="281" y="102" width="47" height="20" uuid="bb05019d-eeee-4582-badd-89d1144b2bbd"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[email:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="245" width="31" height="20" uuid="0f3cd562-e936-4f24-8301-4e2dcdcc118a"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="178" height="20" uuid="017e93c0-9d01-4cb4-8547-6e305e8f149e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[structure demandresse:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="42" width="100" height="20" uuid="0a9418aa-a8e4-4c86-a6c0-baa186d65d4c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[demandeur:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="289" width="590" height="20" uuid="37e3a477-349c-4cf2-913a-1218a8c080da"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="72" width="171" height="20" uuid="50a82184-3167-4ea6-aada-a0491e9a8022"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fonction}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="205" width="72" height="20" uuid="ba10cd2a-3cce-4546-8ee2-8253414b874c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fonction:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="102" width="31" height="20" uuid="36d528c0-8d58-4b7d-828f-bbe5f43cf754"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="175" width="84" height="20" uuid="6f385833-0e4a-4f67-943e-e3ef3d09c569"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[intervenant:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="289" width="84" height="20" uuid="f8e47c43-b63b-488c-a058-488842461465"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[description des: traveaux]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="132" width="792" height="31" uuid="1e8832f3-2917-4ddb-bcee-b3333b52ba48"/>
+				<box>
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[intervenant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="72" width="100" height="20" uuid="f58bc6f3-997d-456e-8ec1-4328f6102c35"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fonction:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="102" width="100" height="20" uuid="d54bb107-26ea-4d7c-9d27-6fa2662c7ba5"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="102" width="209" height="20" uuid="d1b86974-7ff6-4f3a-8bf1-f1d7285356b8"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="175" width="171" height="20" uuid="15b5badf-ae29-4f18-b641-6ac9ebb8a6aa"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{intervenant}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="277" y="245" width="51" height="20" uuid="d99b88ad-8b3b-4518-b30a-73deefea2206"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[email:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="328" y="245" width="198" height="20" uuid="2842fda2-d9a4-491b-bf5e-eaa6be968637"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email_inter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="10" width="198" height="20" uuid="134bd347-89f9-4d42-b071-4438a1aa4bcb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{service}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="315" y="10" width="13" height="20" uuid="1feb02fe-e8f0-4a0f-88b9-11c3e5ff1129"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="629" y="43" width="100" height="20" uuid="a7777d28-1221-4d6f-91e7-b8d8f4422922"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{intervenant}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="576" y="23" width="100" height="20" uuid="148a4ad0-aa9d-4722-a3e0-8df514a175c3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[intervenant:]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>
